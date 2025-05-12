@@ -103,8 +103,6 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
-
-
 .category-tab {
     transition: all 0.3s ease;
     cursor: pointer;
@@ -122,7 +120,7 @@ h1, h2, h3 {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
     /* border-radius: 14px; */
     padding: 0.75rem 0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
     transition: box-shadow 0.4s ease, background-color 0.4s ease;
 }
 
