@@ -16,6 +16,11 @@ function showCategory(category) {
         sections.forEach(section => {
             section.style.display = 'block';
         });
+        const menu = document.querySelector('.bg-white.sticky.top-0.z-10.shadow-md');
+        if (menu) {
+            const menuOffset = menu.offsetTop;
+            window.scrollTo({ top: menuOffset, behavior: 'smooth' });
+        }
         return;
     }
     
@@ -50,6 +55,11 @@ function showCategory(category) {
                 section.style.display = 'block';
             }
         });
+    }
+    const menu = document.querySelector('.bg-white.sticky.top-0.z-10.shadow-md');
+    if (menu) {
+        const menuOffset = menu.offsetTop;
+        window.scrollTo({ top: menuOffset, behavior: 'smooth' });
     }
 }
 
