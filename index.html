@@ -24,7 +24,7 @@
             </div>
             <div class="flex items-center justify-center">
                 <div class="bg-amber-800 rounded-full p-4 shadow-lg hover:scale-110 transition-transform">
-                    <img src="./assets/images/pic.jpeg" alt="free" />
+                    <img src="./assets/images/pic.jpeg" alt="Restaurant image" />
                 </div>
             </div>
         </div>
@@ -37,6 +37,9 @@
       <div class="flex overflow-x-auto py-3 px-4 scrollbar-hide relative">
         <button class="category-tab whitespace-nowrap px-4 py-2 mx-1 rounded-full text-sm font-medium bg-amber-800 text-white active-tab" onclick="showCategory('all', event)">
           <i class="fas fa-utensils mr-1 category-icon"></i> Tout
+        </button>
+        <button class="category-tab whitespace-nowrap px-4 py-2 mx-1 rounded-full text-sm font-medium bg-amber-100 text-amber-800" onclick="showCategory('petit-dej', event)">
+          <i class="fas fa-drumstick-bite mr-1 category-icon"></i> Petit Déjeuner
         </button>
         <button class="category-tab whitespace-nowrap px-4 py-2 mx-1 rounded-full text-sm font-medium bg-amber-100 text-amber-800" onclick="showCategory('burgers', event)">
           <i class="fas fa-hamburger mr-1 category-icon"></i> Burgers
@@ -65,11 +68,17 @@
         <button class="category-tab whitespace-nowrap px-4 py-2 mx-1 rounded-full text-sm font-medium bg-amber-100 text-amber-800" onclick="showCategory('desserts', event)">
           <i class="fas fa-ice-cream mr-1 category-icon"></i> Desserts
         </button>
+        <button class="category-tab whitespace-nowrap px-4 py-2 mx-1 rounded-full text-sm font-medium bg-amber-100 text-amber-800" onclick="showCategory('patisseries', event)">
+        <i class="fas fa-birthday-cake mr-1 category-icon"></i> Pâtisseries
+        </button>
         <button class="category-tab whitespace-nowrap px-4 py-2 mx-1 rounded-full text-sm font-medium bg-amber-100 text-amber-800" onclick="showCategory('salades', event)">
           <i class="fas fa-leaf mr-1 category-icon"></i> Salades
         </button>
         <button class="category-tab whitespace-nowrap px-4 py-2 mx-1 rounded-full text-sm font-medium bg-amber-100 text-amber-800" onclick="showCategory('sandwichs', event)">
           <i class="fas fa-bread-slice mr-1 category-icon"></i> Sandwichs
+        </button>
+        <button class="category-tab whitespace-nowrap px-4 py-2 mx-1 rounded-full text-sm font-medium bg-amber-100 text-amber-800" onclick="showCategory('suppléments', event)">
+          <i class="fas fa-tint mr-1 category-icon"></i> Suppléments
         </button>
       </div>
     </div>
@@ -79,7 +88,66 @@
 
 <div class="container mx-auto max-w-5xl px-4 py-8">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
+        <!-- Petit Dejeuner Section -->
+        <div id="petit-dej" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
+            <div class="flex items-center mb-4">
+                <div class="bg-amber-100 p-3 rounded-full mr-3">
+                    <i class="fas fa-drumstick-bite text-amber-800 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-amber-900">Petit Déjeuner</h2>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Piccolino</h3>
+                    </div>
+                    <span class="price">5.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Piccolo</h3>
+                    </div>
+                    <span class="price">6.500 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Medio</h3>
+                    </div>
+                    <span class="price">8.500 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Completo</h3>
+                    </div>
+                    <span class="price">11.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Bichou</h3>
+                    </div>
+                    <span class="price">14.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Gemella</h3>
+                    </div>
+                    <span class="price">32.000 Dt</span>
+                </div>
+            </div>
+            
+            
+        </div>
+
         <!-- Burgers Section -->
         <div id="burgers" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
             <div class="flex items-center mb-4">
@@ -92,7 +160,7 @@
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
                     <div>
-                        <h3 class="font-semibold text-lg">Chiken Burger</h3>
+                        <h3 class="font-semibold text-lg">Chicken Burger</h3>
                         <p class="text-sm text-gray-600">Escalope, Fromage, Laitue, Tomate, Frite</p>
                     </div>
                     <span class="price">10.000 Dt</span>
@@ -109,6 +177,7 @@
                 </div>
             </div>
         </div>
+
         
         <!-- Plats Section -->
         <div id="plats" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
@@ -122,7 +191,7 @@
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
                     <div>
-                        <h3 class="font-semibold text-lg">Plat chich taouk</h3>
+                        <h3 class="font-semibold text-lg">Plat Chich Taouk</h3>
                         <p class="text-sm text-gray-600">Poulet, Salade, Riz, Frite</p>
                     </div>
                     <span class="price">20.500 Dt</span>
@@ -154,7 +223,7 @@
         <div id="boissons" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
             <div class="flex items-center mb-4">
                 <div class="bg-amber-100 p-3 rounded-full mr-3">
-            <i class="fas fa-tint text-amber-800 text-xl"></i>
+            <i class="fas fa-wine-glass text-amber-800 text-xl"></i>
                 </div>
                 <h2 class="text-2xl font-bold text-amber-900">Boissons Fraiches</h2>
             </div>
@@ -189,14 +258,72 @@
             
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Soda aux choix</h3>
+                    <h3 class="font-semibold text-lg">Soda Aux Choix</h3>
                     <span class="price">4.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Schweppes</h3>
+                    <span class="price">5.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Orangina</h3>
+                    <span class="price">5.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Pepsi/Miranda/7 Up</h3>
+                    <span class="price">5.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Boisson Énergétique</h3>
+                    <span class="price">9.000 Dt</span>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Boissons Chaudes Section -->
+        <div id="boissons-chaudes" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
+            <div class="flex items-center mb-4">
+                <div class="bg-amber-100 p-3 rounded-full mr-3">
+                    <i class="fas fa-mug-hot text-amber-800 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-amber-900">Boissons Chaudes</h2>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Chocolat au lait</h3>
+                    <span class="price">4.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Chocolat Chaud</h3>
+                    <span class="price">7.000 Dt</span>
                 </div>
             </div>
             
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Boisson énergétique</h3>
+                    <h3 class="font-semibold text-lg">Chocolat Chaud aux Amandes</h3>
+                    <span class="price">8.500 Dt</span>
+                </div>
+            </div>
+            
+            
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Chocolat Chaud AL Posto</h3>
+                        <p class="text-sm text-gray-600">Chocolat Chaud + Chantilly + Fruits Secs</p>
+                    </div>
                     <span class="price">9.000 Dt</span>
                 </div>
             </div>
@@ -210,7 +337,26 @@
                 </div>
                 <h2 class="text-2xl font-bold text-amber-900">Jus Frais</h2>
             </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Jus d'orange</h3>
+                    <span class="price">5.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Citronnade</h3>
+                    <span class="price">5.000 Dt</span>
+                </div>
+            </div>
             
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Citronnade aux amandes</h3>
+                    <span class="price">8.000 Dt</span>
+                </div>
+            </div>
+
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
                     <h3 class="font-semibold text-lg">Jus de pomme</h3>
@@ -220,7 +366,7 @@
             
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Jus de Fraise</h3>
+                    <h3 class="font-semibold text-lg">Jus de fraise</h3>
                     <span class="price">8.000 Dt</span>
                 </div>
             </div>
@@ -239,26 +385,22 @@
                 </div>
             </div>
             
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Jus d'orange</h3>
-                    <span class="price">5.000 Dt</span>
-                </div>
-            </div>
             
+
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Citronnade</h3>
-                    <span class="price">5.000 Dt</span>
+                    <h3 class="font-semibold text-lg">Jus de banane</h3>
+                    <span class="price">9.000 Dt</span>
                 </div>
             </div>
-            
+
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Citronnade aux Amandes</h3>
-                    <span class="price">8.000 Dt</span>
+                    <h3 class="font-semibold text-lg">Jus ananas</h3>
+                    <span class="price">10.000 Dt</span>
                 </div>
             </div>
+        
         </div>
         
         <!-- Cocktails Section -->
@@ -269,7 +411,12 @@
                 </div>
                 <h2 class="text-2xl font-bold text-amber-900">Cocktails</h2>
             </div>
-            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Mojito</h3>
+                    <span class="price">9.000 Dt</span>
+                </div>
+            </div>
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
                     <h3 class="font-semibold text-lg">Cocktail 2 gouts</h3>
@@ -291,349 +438,10 @@
                 </div>
             </div>
             
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Mojito</h3>
-                    <span class="price">9.000 Dt</span>
-                </div>
-            </div>
+            
         </div>
-        
-        <!-- Café Section -->
-        <div id="cafe" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
-            <div class="flex items-center mb-4">
-                <div class="bg-amber-100 p-3 rounded-full mr-3">
-                    <i class="fas fa-mug-hot text-amber-800 text-xl"></i>
-                </div>
-                <h2 class="text-2xl font-bold text-amber-900">Café</h2>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Express</h3>
-                    <span class="price">2.800 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Capucin</h3>
-                    <span class="price">3.200 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Café Crème</h3>
-                    <span class="price">3.500 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Americain</h3>
-                    <span class="price">3.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Café Glacé</h3>
-                    <span class="price">4.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Café Turc</h3>
-                    <span class="price">4.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Cappucino à la Crème Chantilly</h3>
-                    <span class="price">5.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Café Liégeois</h3>
-                    <span class="price">6.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Café Viennois</h3>
-                    <span class="price">6.500 Dt</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Café Lavazza / Nespresso Section -->
-        <div id="cafe-special" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
-            <div class="flex items-center mb-4">
-                <div class="bg-amber-100 p-3 rounded-full mr-3">
-                    <i class="fas fa-coffee text-amber-800 text-xl"></i>
-                </div>
-                <h2 class="text-2xl font-bold text-amber-900">Café Lavazza / Nespresso</h2>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Express</h3>
-                    <span class="price">4.500 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Capucin</h3>
-                    <span class="price">5.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Café Crème</h3>
-                    <span class="price">5.500 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Americain</h3>
-                    <span class="price">5.000 Dt</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Croissant Section -->
-        <div id="croissant" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
-            <div class="flex items-center mb-4">
-                <div class="bg-amber-100 p-3 rounded-full mr-3">
-            <i class="fas fa-bread-slice text-amber-800 text-xl"></i>
-                </div>
-                <h2 class="text-2xl font-bold text-amber-900">Croissant</h2>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Pain au Chocolat</h3>
-                    <span class="price">2.500 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Croissant Normal / Cake</h3>
-                    <span class="price">2.300 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Croissant Amande</h3>
-                    <span class="price">3.000 Dt</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Thé Section -->
-        <div id="the" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
-            <div class="flex items-center mb-4">
-                <div class="bg-amber-100 p-3 rounded-full mr-3">
-                    <i class="fas fa-mug-saucer text-amber-800 text-xl"></i>
-                </div>
-                <h2 class="text-2xl font-bold text-amber-900">Thé</h2>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Thé à la Menthe</h3>
-                    <span class="price">2.800 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Thé aux Amandes</h3>
-                    <span class="price">6.800 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Thé aux Pignons</h3>
-                    <span class="price">9.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Thé Infusion</h3>
-                    <span class="price">4.000 Dt</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Chicha Section -->
-        <div id="chicha" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
-            <div class="flex items-center mb-4">
-                <div class="bg-amber-100 p-3 rounded-full mr-3">
-                    <i class="fas fa-smoking text-amber-800 text-xl"></i>
-                </div>
-                <h2 class="text-2xl font-bold text-amber-900">Chicha</h2>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Chicha Fakher</h3>
-                    <span class="price">7.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Chicha Silicone</h3>
-                    <span class="price">9.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-semibold text-lg">Chicha Royale</h3>
-                        <p class="text-sm text-gray-600">Chicha + Seau A Glaçons</p>
-                    </div>
-                    <span class="price">12.000 Dt</span>
-                </div>
-            </div>
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-semibold text-lg">Chicha V.I.P</h3>
-                        <p class="text-sm text-gray-600">Chicha + Seau à Glaçons Lumineux</p>
-                    </div>
-                    <span class="price">15.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Chicha au fruit</h3>
-                    <span class="price">20.000 Dt</span>
-                </div>
-            </div>
-            
-            <h3 class="font-semibold text-lg mt-4 mb-2">Accessoires Chicha:</h3>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Seau à Glaçons</h3>
-                    <span class="price">4.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Seau à Glaçons Lumineux</h3>
-                    <span class="price">6.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Tuyau Jetable</h3>
-                    <span class="price">2.500 Dt</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Boissons Chaudes Section -->
-        <div id="boissons-chaudes" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
-            <div class="flex items-center mb-4">
-                <div class="bg-amber-100 p-3 rounded-full mr-3">
-                    <i class="fas fa-mug-hot text-amber-800 text-xl"></i>
-                </div>
-                <h2 class="text-2xl font-bold text-amber-900">Boissons Chaudes</h2>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Chocolat Chaud</h3>
-                    <span class="price">7.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Chocolat Chaud aux Amandes</h3>
-                    <span class="price">8.500 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Chocolat au lait</h3>
-                    <span class="price">4.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-semibold text-lg">Chocolat Chaud al posto</h3>
-                        <p class="text-sm text-gray-600">Chocolat Chaud + Chantilly + Fruits Secs</p>
-                    </div>
-                    <span class="price">9.000 Dt</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Glaces Section -->
-        <div id="desserts" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
-            <div class="flex items-center mb-4">
-                <div class="bg-amber-100 p-3 rounded-full mr-3">
-                    <i class="fas fa-ice-cream text-amber-800 text-xl"></i>
-                </div>
-                <h2 class="text-2xl font-bold text-amber-900">Glaces</h2>
-            </div>
-            
-            <h3 class="font-semibold text-lg mb-2">Granito</h3>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Une Boule au choix</h3>
-                    <span class="price">4.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Deux Boules au choix</h3>
-                    <span class="price">5.500 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Trois Boules au choix</h3>
-                    <span class="price">7.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Coupe Al Posto</h3>
-                    <span class="price">10.000 Dt</span>
-                </div>
-            </div>
-        </div>
-        <!-- Glaces Section -->
-        <div id="desserts" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
+        <!-- Milkshake Section -->
+        <div id="milkshake" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
 <div class="flex items-center mb-4">
     <div class="bg-amber-100 p-3 rounded-full mr-3">
         <i class="fas fa-blender text-amber-800 text-xl"></i>
@@ -674,7 +482,405 @@
                     <span class="price">8.000 Dt</span>
                 </div>
             </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Speculoos/Nute</h3>
+                    <span class="price">12.000 Dt</span>
+                </div>
+            </div>
         </div>
+        
+        <!-- Café Section -->
+        <div id="cafe" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
+            <div class="flex items-center mb-4">
+                <div class="bg-amber-100 p-3 rounded-full mr-3">
+                    <i class="fas fa-mug-hot text-amber-800 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-amber-900">Café</h2>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Express</h3>
+                    <span class="price">2.800 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Capucin</h3>
+                    <span class="price">3.200 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Americain</h3>
+                    <span class="price">3.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Café Crème</h3>
+                    <span class="price">3.500 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Cappucino</h3>
+                    <span class="price">5.000 Dt</span>
+                </div>
+            </div>
+            
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Café Glacé</h3>
+                    <span class="price">5.500 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Café Turc</h3>
+                    <span class="price">4.000 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Café Nescafé</h3>
+                    <span class="price">3.500 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Café Noisette</h3>
+                    <span class="price">4.500 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Cappucino à la crème chantilly</h3>
+                    <span class="price">5.000 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Café Liégeois</h3>
+                    <span class="price">6.000 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Café Viennois</h3>
+                    <span class="price">6.500 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Café Importé</h3>
+                    <span class="price">2.800 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Tasse du lait</h3>
+                    <span class="price">2.000 Dt</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Café Lavazza / Nespresso Section -->
+        <div id="cafe-special" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
+            <div class="flex items-center mb-4">
+                <div class="bg-amber-100 p-3 rounded-full mr-3">
+                    <i class="fas fa-coffee text-amber-800 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-amber-900">Café Lavazza / Nespresso</h2>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Express</h3>
+                    <span class="price">4.500 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Capucin</h3>
+                    <span class="price">5.000 Dt</span>
+                </div>
+            </div>
+
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Americain</h3>
+                    <span class="price">5.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Café Crème</h3>
+                    <span class="price">5.500 Dt</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Croissant Section -->
+        <div id="croissant" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
+            <div class="flex items-center mb-4">
+                <div class="bg-amber-100 p-3 rounded-full mr-3">
+            <i class="fas fa-bread-slice text-amber-800 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-amber-900">Croissant</h2>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Croissant Normal / Cake</h3>
+                    <span class="price">2.300 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Pain au chocolat</h3>
+                    <span class="price">2.500 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Croissant amande</h3>
+                    <span class="price">3.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Pathé</h3>
+                    <span class="price">3.000 Dt</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Thé Section -->
+        <div id="the" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
+            <div class="flex items-center mb-4">
+                <div class="bg-amber-100 p-3 rounded-full mr-3">
+                    <i class="fas fa-mug-saucer text-amber-800 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-amber-900">Thé</h2>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Thé à la menthe</h3>
+                    <span class="price">2.800 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Thé infusion</h3>
+                    <span class="price">4.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Thé aux amandes</h3>
+                    <span class="price">6.800 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Thé aux pignons</h3>
+                    <span class="price">9.000 Dt</span>
+                </div>
+            </div>
+
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Thé glacé</h3>
+                    <span class="price">10.000 Dt</span>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        <!-- Chicha Section -->
+        <div id="chicha" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
+            <div class="flex items-center mb-4">
+                <div class="bg-amber-100 p-3 rounded-full mr-3">
+                    <i class="fas fa-smoking text-amber-800 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-amber-900">Chicha</h2>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Chicha Vide</h3>
+                    <span class="price">5.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Chicha Fakher</h3>
+                    <span class="price">7.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Chicha Raisin</h3>
+                    <span class="price">9.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Chicha Raisin Menthe</h3>
+                    <span class="price">9.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Chicha Cheikh Money</h3>
+                    <span class="price">9.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Chicha Love</h3>
+                    <span class="price">9.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Chicha Menthe</h3>
+                    <span class="price">9.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Chicha Miamore</h3>
+                    <span class="price">9.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Chicha Pomme</h3>
+                    <span class="price">9.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Chicha Silicone</h3>
+                    <span class="price">9.000 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Chicha Royale</h3>
+                        <p class="text-sm text-gray-600">Chicha + Seau A Glaçons</p>
+                    </div>
+                    <span class="price">12.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Chicha V.I.P</h3>
+                        <p class="text-sm text-gray-600">Chicha + Seau à Glaçons Lumineux</p>
+                    </div>
+                    <span class="price">15.000 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Chicha Au Fruit</h3>
+                    <span class="price">20.000 Dt</span>
+                </div>
+            </div>
+            
+            <h3 class="font-semibold text-lg mt-4 mb-2">Accessoires Chicha:</h3>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Tuyau Jetable</h3>
+                    <span class="price">2.500 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Seau à Glaçons</h3>
+                    <span class="price">4.000 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Seau à Glaçons Lumineux</h3>
+                    <span class="price">6.000 Dt</span>
+                </div>
+            </div>
+            
+            
+        </div>
+
+        <!-- Glaces Section -->
+        <div id="desserts" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
+            <div class="flex items-center mb-4">
+                <div class="bg-amber-100 p-3 rounded-full mr-3">
+                    <i class="fas fa-ice-cream text-amber-800 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-amber-900">Glaces</h2>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Granite</h3>
+                    <span class="price">4.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Granite panaché</h3>
+                    <span class="price">5.000 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Une Boule au choix</h3>
+                    <span class="price">4.000 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Deux Boules au choix</h3>
+                    <span class="price">5.500 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Trois Boules au choix</h3>
+                    <span class="price">7.000 Dt</span>
+                </div>
+            </div>
+            
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Coupe Al Posto</h3>
+                    <span class="price">10.000 Dt</span>
+                </div>
+            </div>
+        </div>
+        
         <!-- Crêpes Section -->
         <div id="crepes" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: block;">
             <div class="flex items-center mb-4">
@@ -688,31 +894,43 @@
             
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Crêpe/Gaufre Chocolat</h3>
+                    <h3 class="font-semibold text-lg">Crêpe/Gaufre chocolat</h3>
                     <span class="price">8.000 Dt</span>
                 </div>
             </div>
-            
-            <div class="menu-item py-3">
+                        <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Crêpe/Gaufre Chocolat banane</h3>
+                    <h3 class="font-semibold text-lg">Crêpe/Gaufre choco banane</h3>
                     <span class="price">10.500 Dt</span>
                 </div>
             </div>
-            
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Crêpe/Gaufre Chocolat Amande</h3>
-                    <span class="price">10.500 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Crêpe/Gaufre (Nutella/Fruits secs)</h3>
+                    <h3 class="font-semibold text-lg">Crêpe/Gaufre nutella</h3>
                     <span class="price">12.000 Dt</span>
                 </div>
             </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Crêpe/Gaufre nutella speculoos</h3>
+                    <span class="price">16.000 Dt</span>
+                </div>
+            </div>
+            
+
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Crêpe/Gaufre choco amande</h3>
+                    <span class="price">10.500 Dt</span>
+                </div>
+            </div>
+            <div class="menu-item py-3">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold text-lg">Crêpe/Gaufre speculoos</h3>
+                    <span class="price">12.000 Dt</span>
+                </div>
+            </div>
+
             
             <h3 class="font-semibold text-lg mt-4 mb-2">Crêpes Salées:</h3>
             
@@ -763,84 +981,129 @@
             
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Omelette Thon Fromage</h3>
+                    <h3 class="font-semibold text-lg">Omelette thon fromage</h3>
                     <span class="price">8.500 Dt</span>
                 </div>
             </div>
             
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Omelette Jambon Fromage</h3>
+                    <h3 class="font-semibold text-lg">Omelette jambon Fromage</h3>
                     <span class="price">8.500 Dt</span>
                 </div>
             </div>
             
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Omelette Spécial</h3>
+                    <h3 class="font-semibold text-lg">Omelette spécial</h3>
                     <span class="price">9.500 Dt</span>
                 </div>
             </div>
-            
-            <h3 class="font-semibold text-lg mt-4 mb-2">Supplément:</h3>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Nestlé</h3>
-                    <span class="price">1.500 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Amande / Noisette</h3>
-                    <span class="price">4.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Pignons</h3>
-                    <span class="price">6.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Aromes</h3>
-                    <span class="price">2.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Thon</h3>
-                    <span class="price">3.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Jambon</h3>
-                    <span class="price">3.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Oeuf</h3>
-                    <span class="price">3.000 Dt</span>
-                </div>
-            </div>
-            
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Assiette de fruits</h3>
-                    <span class="price">7.000 Dt</span>
-                </div>
-            </div>
+
         </div>
-        
+
+        <!-- Pâtisseries Section -->
+<div id="patisseries" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: none;">
+    <div class="flex items-center mb-4">
+        <div class="bg-amber-100 p-3 rounded-full mr-3">
+            <i class="fas fa-birthday-cake text-amber-800 text-xl"></i>
+        </div>
+        <h2 class="text-2xl font-bold text-amber-900">Pâtisseries</h2>
+    </div>
+    
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Amandine</h3>
+            <span class="price">5.500 Dt</span>
+        </div>
+    </div>
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Brownies</h3>
+            <span class="price">5.500 Dt</span>
+        </div>
+    </div>
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Gateaux</h3>
+            <span class="price">8.000 Dt</span>
+        </div>
+    </div>
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Gateaux Fakia</h3>
+            <span class="price">7.000 Dt</span>
+        </div>
+    </div>
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Eclair</h3>
+            <span class="price">5.500 Dt</span>
+        </div>
+    </div>
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Fondant chocolat</h3>
+            <span class="price">6.500 Dt</span>
+        </div>
+    </div>
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Fondant chocolat glacé</h3>
+            <span class="price">8.000 Dt</span>
+        </div>
+    </div>
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Fondant noisette</h3>
+            <span class="price">8.500 Dt</span>
+        </div>
+    </div>
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Fondant noisette glacé</h3>
+            <span class="price">10.000 Dt</span>
+        </div>
+    </div>
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Fondant pistache</h3>
+            <span class="price">11.000 Dt</span>
+        </div>
+    </div>
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Fondant pistache glacé</h3>
+            <span class="price">13.000 Dt</span>
+        </div>
+    </div>
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Cheese Cake</h3>
+            <span class="price">6.000 Dt</span>
+        </div>
+    </div>
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Boulette chocolat</h3>
+            <span class="price">6.000 Dt</span>
+        </div>
+    </div>
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Mini gateaux</h3>
+            <span class="price">2.000 Dt</span>
+        </div>
+    </div>
+    <div class="menu-item py-3">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-lg">Droit de gateaux</h3>
+            <span class="price">40.000 Dt</span>
+        </div>
+    </div>
+    
+</div>
+
         <!-- Salades Section -->
         <div id="salades" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: none;">
             <div class="flex items-center mb-4">
@@ -854,7 +1117,7 @@
                 <div class="flex justify-between items-start">
                     <div>
                         <h3 class="font-semibold text-lg">Salade du Chef</h3>
-                        <p class="text-sm text-gray-600">Laitue, tomate, Jambon, oeuf dur, parmeson, sauce pesto ou sauce mayounaise</p>
+                        <p class="text-sm text-gray-600">Laitue, tomate, Jambon, oeuf dur, parmesan, sauce pesto ou sauce mayonnaise</p>
                     </div>
                     <span class="price">8.900 Dt</span>
                 </div>
@@ -864,7 +1127,7 @@
                 <div class="flex justify-between items-start">
                     <div>
                         <h3 class="font-semibold text-lg">Salade Impériale</h3>
-                        <p class="text-sm text-gray-600">Laitue, tomate, thon, parmeson, sauce pesto ou sauce mayounaise</p>
+                        <p class="text-sm text-gray-600">Laitue, tomate, thon, parmesan, sauce pesto ou sauce mayonnaise</p>
                     </div>
                     <span class="price">9.800 Dt</span>
                 </div>
@@ -874,7 +1137,7 @@
                 <div class="flex justify-between items-start">
                     <div>
                         <h3 class="font-semibold text-lg">Salade César</h3>
-                        <p class="text-sm text-gray-600">Laitue, tomate, poulet, fromage parmeson, sauce pesto ou sauce mayounaise</p>
+                        <p class="text-sm text-gray-600">Laitue, tomate, poulet, fromage parmesan, sauce pesto ou sauce mayonnaise</p>
                     </div>
                     <span class="price">11.900 Dt</span>
                 </div>
@@ -884,7 +1147,7 @@
                 <div class="flex justify-between items-start">
                     <div>
                         <h3 class="font-semibold text-lg">Salade Al Posto</h3>
-                        <p class="text-sm text-gray-600">Laitue, tomate, poulet, jambon, fromage, oeuf dur parmeson, sauce pesto ou sauce mayounaise</p>
+                        <p class="text-sm text-gray-600">Laitue, tomate, poulet, jambon, fromage, oeuf dur parmesan, sauce pesto ou sauce mayonnaise</p>
                     </div>
                     <span class="price">15.000 Dt</span>
                 </div>
@@ -902,7 +1165,7 @@
             
             <div class="menu-item py-3">
                 <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Sandwich chich taouk</h3>
+                    <h3 class="font-semibold text-lg">Sandwich Chich Taouk</h3>
                     <span class="price">9.800 Dt</span>
                 </div>
             </div>
@@ -928,12 +1191,104 @@
                 </div>
             </div>
             
-            <div class="menu-item py-3">
-                <div class="flex justify-between items-start">
-                    <h3 class="font-semibold text-lg">Suplément portion frites</h3>
-                    <span class="price">3.000 Dt</span>
-                </div>
-            </div>
+        </div>
+
+        <!-- Suppléments Section -->
+<div id="suppléments" class="menu-section bg-white rounded-lg shadow-md p-6" style="display: none;">
+  <!-- Suppléments apéritif -->
+  <div class="mb-8">
+    <div class="flex items-center mb-4">
+      <div class="bg-amber-100 p-3 rounded-full mr-3">
+        <i class="fas fa-tint text-amber-800 text-xl"></i>
+      </div>
+      <h2 class="text-2xl font-bold text-amber-900">Suppléments Apéritif</h2>
+    </div>
+    <div class="menu-item py-3">
+      <div class="flex justify-between items-start">
+        <h3 class="font-semibold text-lg">Arôme</h3>
+        <span class="price">1.500 Dt</span>
+      </div>
+    </div>
+    <div class="menu-item py-3">
+      <div class="flex justify-between items-start">
+        <h3 class="font-semibold text-lg">Nestlé</h3>
+        <span class="price">1.500 Dt</span>
+      </div>
+    </div>
+    <div class="menu-item py-3">
+      <div class="flex justify-between items-start">
+        <h3 class="font-semibold text-lg">Amande / Noisette</h3>
+        <span class="price">4.000 Dt</span>
+      </div>
+    </div>
+    <div class="menu-item py-3">
+      <div class="flex justify-between items-start">
+        <h3 class="font-semibold text-lg">Pignons</h3>
+        <span class="price">6.000 Dt</span>
+      </div>
+    </div>
+    <div class="menu-item py-3">
+      <div class="flex justify-between items-start">
+        <h3 class="font-semibold text-lg">Assiette de fruits</h3>
+        <span class="price">7.000 Dt</span>
+      </div>
+    </div>
+  </div>
+  <br/>
+
+  <!-- Suppléments Appât -->
+  <div>
+    <div class="flex items-center mb-4">
+      <div class="bg-amber-100 p-3 rounded-full mr-3">
+        <i class="fas fa-utensils text-amber-800 text-xl"></i>
+      </div>
+      <h2 class="text-2xl font-bold text-amber-900">Suppléments Appât</h2>
+    </div>
+    <div class="menu-item py-3">
+      <div class="flex justify-between items-start">
+        <h3 class="font-semibold text-lg">Jambon</h3>
+        <span class="price">3.000 Dt</span>
+      </div>
+    </div>
+    <div class="menu-item py-3">
+      <div class="flex justify-between items-start">
+        <h3 class="font-semibold text-lg">Œuf</h3>
+        <span class="price">3.000 Dt</span>
+      </div>
+    </div>
+    <div class="menu-item py-3">
+      <div class="flex justify-between items-start">
+        <h3 class="font-semibold text-lg">Thon</h3>
+        <span class="price">3.000 Dt</span>
+      </div>
+    </div>
+    <div class="menu-item py-3">
+      <div class="flex justify-between items-start">
+        <h3 class="font-semibold text-lg">Fromage</h3>
+        <span class="price">3.000 Dt</span>
+      </div>
+    </div>
+    <div class="menu-item py-3">
+      <div class="flex justify-between items-start">
+        <h3 class="font-semibold text-lg">Portion de frites</h3>
+        <span class="price">3.000 Dt</span>
+      </div>
+    </div>
+    <div class="menu-item py-3">
+      <div class="flex justify-between items-start">
+        <h3 class="font-semibold text-lg">Supplément chocolat</h3>
+        <span class="price">2.500 Dt</span>
+      </div>
+    </div>
+    <div class="menu-item py-3">
+      <div class="flex justify-between items-start">
+        <h3 class="font-semibold text-lg">Supplément Nutella</h3>
+        <span class="price">4.500 Dt</span>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
     </div>
 </div>
@@ -949,7 +1304,7 @@
     allowfullscreen
     loading="lazy"
     referrerpolicy="no-referrer-when-downgrade"
-    title="Location Map"
+    title="Localisation de Al Posto Giusto"
   ></iframe>
 </section>
 
@@ -959,7 +1314,7 @@
     <div class="container mx-auto max-w-5xl">
         <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="mb-4 md:mb-0">
-                <h2 class="text-2xl font-bold text-gradient">Al. Posto grusto</h2>
+                <h2 class="text-2xl font-bold text-gradient">Al. Posto giusto</h2>
                 <p>Resto Salon de Thé</p>
             </div>
             <div class="flex flex-col items-center md:items-end">

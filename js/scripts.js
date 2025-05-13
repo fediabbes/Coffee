@@ -47,9 +47,35 @@ function showCategory(category) {
             }
         });
     }
+    if (category === 'cocktails') {
+        const cafeSections = document.querySelectorAll('#cocktails, #milkshake');
+        cafeSections.forEach(section => {
+            if (section) {
+                section.style.display = 'block';
+            }
+        });
+    }
+if (category === 'boissons') {
+        const cafeSections = document.querySelectorAll('#boissons-chaudes, #boissons-fraiches');
+        cafeSections.forEach(section => {
+            if (section) {
+                section.style.display = 'block';
+            }
+        });
+    }
+
+
+    if (category === 'patisseries') {
+        const patisserieSections = document.querySelectorAll('#patisseries');
+        patisserieSections.forEach(section => {
+            if (section) {
+                section.style.display = 'block';
+            }
+        });
+    }
     
     if (category === 'cafe') {
-        const cafeSections = document.querySelectorAll('#cafe, #cafe-special, #boissons-chaudes, #croissant');
+        const cafeSections = document.querySelectorAll('#cafe, #cafe-special, #croissant');
         cafeSections.forEach(section => {
             if (section) {
                 section.style.display = 'block';
